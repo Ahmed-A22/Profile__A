@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Terminal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Consolas,monospace;
+}
+
+.terminal{
+    width:95%;
+    max-width:1450px;
+    height:92vh;
+    background:#000;
+    border-radius:25px;
+    overflow:hidden;
+    border:2px solid #00ff66;
+    box-shadow:
+        0 0 10px #00ff66,
+        0 0 40px rgba(0,255,100,.2);
+}
+
+.titlebar{
+    height:70px;
+    background:#0c0f12;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    border-bottom:2px solid #2b2b2b;
+}
+
+.buttons{
+    position:absolute;
+    left:25px;
+    display:flex;
+    gap:14px;
+}
+
+.buttons span{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    display:block;
+}
+
+.red{background:#ff5f56;}
+.yellow{background:#ffbd2e;}
+.green{background:#27c93f;}
+
+.title{
+    font-size:32px;
+    color:#ddd;
+}
+
+.green-text{
+    color:#00ff3c;
+}
+
+.blue{
+    color:#55a8ff;
+}
+
+.screen{
+    padding:35px;
+    height:calc(100% - 70px);
+    overflow-y:auto;
+}
+
+#terminal{
+    white-space:pre-wrap;
+    font-size:30px;
+    line-height:1.6;
+    color:#eee;
+}
+
+.prompt{
+    color:#00ff3c;
+    font-weight:bold;
+}
+
+.yellow{
+    color:#ffe600;
+}
+
+.pink{
+    color:#ff00ff;
+}
